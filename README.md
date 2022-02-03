@@ -1,2 +1,2 @@
-"# SuperSplitter" 
-- DCM Nam chay file start.sh trong container
+# SuperSplitter
+- Run the start.sh script inside the container to start the server
