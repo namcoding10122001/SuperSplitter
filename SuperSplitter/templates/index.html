@@ -1,9 +1,15 @@
 <!-- templates/home.html-->
 {% extends 'base.html' %}
+{% load static%}
 
 {% block title %}Home{% endblock %}
 
+
+
 {% block content %}
+<p class="testing">This is a test</p>
+<img src="{% static 'images/200.GIF' %}">
+
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">Log Out</a></p>
