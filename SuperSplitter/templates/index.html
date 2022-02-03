@@ -1,4 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
 <!-- templates/home.html-->
+
 {% extends 'base.html' %}
 {% load static%}
 
@@ -9,6 +27,7 @@
 {% block content %}
 <p class="testing">This is a test</p>
 <img src="{% static 'images/200.GIF' %}">
+
 
 {% if user.is_authenticated %}
   Hi {{ user.username }}!

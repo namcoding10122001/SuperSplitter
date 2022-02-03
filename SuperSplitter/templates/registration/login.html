@@ -1,6 +1,45 @@
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
-</form>
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  </head>
+  <body>
+  <!--Logo-->
+  <header>
+    <div class="logo">
+      <img src="../../static/images/split-logo.PNG">
+    </div>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+    </button> <!--See again how aria-label works-->
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__items" <a href="#" class="nav__link">Home</a></li>
+            
+            <li class="nav__items" <a href="#" class="nav__link">About us</a></li>
+            <li class="nav__items" <a href="#" class="nav__link">My works</a></li>
+        </ul>
+    </nav>
+  </header>
+
+
+  <h2>Log In</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Log In</button>
+  
+    <script src="" async defer></script>
+  </body>
+</html>
+
+
+
