@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>This is user profiles</h1>
+{% for profile in profiles %}
+    <h3>{{profile.name}}</h3>
+{% endfor %}
+
+{% endblock content %}
