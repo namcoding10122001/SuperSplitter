@@ -11,13 +11,17 @@ body {
 
 }
 
-h2 {
+.title {
+    
     display: flex;
     justify-content: center;
     color: #3eadcf;
+    margin-top: 40px;
+    
 }
 
 .login {
+    display: inline-block;
     width: 350px;
 	height: 500px;
     background: white;
@@ -35,7 +39,7 @@ label {
 .input__email {
     display: flex;
     justify-content: center;
-    margin: 120px auto 0px;
+    margin: 60px auto 0px;
 	padding: 20px;
     border-radius: 5px;
     background: #fff;
@@ -47,7 +51,7 @@ label {
 .input__password {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
+    margin: 20px auto 60px;
 	padding: 20px;
     border-radius: 5px;
     background: #fff;
@@ -59,7 +63,7 @@ label {
 button {
     width: 60%;
 	height: 40px;
-	margin: 10px auto;
+	margin: 40px auto 0px;
 	justify-content: center;
 	display: block;
 	color: #fff;

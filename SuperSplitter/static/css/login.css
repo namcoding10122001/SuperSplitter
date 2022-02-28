@@ -1,17 +1,103 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --clr-blue: 220 74% 43%;
+    --clr-teal: 168 96% 46%;
+    --clr-white: 0 0% 100%;
+    --clr-black: 0 0% 0%;
+}
+
+/* --------------- */
+/* css resets      */
+/* --------------- */
+
+/* reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+
+
+/* --------------- */
+/* Utility classes */
+/* --------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem); /*1 rem is the fallback for the variable gap which has not been declared yet*/
+    
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+    
+}
+
+/* images reset */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* form reset  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
 body {
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
     margin: 0;
 	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
-	background-color: #abe9cd;
-    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+
+	min-height: 100%;
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--clr-white)
+    
 
 }
 
-.title {
+.login {
+    grid-column: 2/ span 5;
+    display: inline-block;
+    
+    
+}
+
+.visual-right {
+    grid-column: 7/ span 6;
+    background-image: url("../images/visual-right-background.png");
+}
+
+.logo {
     
     display: flex;
     justify-content: center;
@@ -20,14 +106,7 @@ body {
     
 }
 
-.login {
-    display: inline-block;
-    width: 350px;
-	height: 500px;
-    background: white;
-    border-radius: 20px;
-    
-}
+
 
 label {
     display: flex;

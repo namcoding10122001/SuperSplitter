@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     
    
   
@@ -23,10 +26,14 @@
   <form method="post">
     {% csrf_token %}
 
-    <div class="login">
-      <h2 class="title">
+    <section class="login">
+      <h2 class="logo">
           SuperSplitter
       </h2>
+
+      <h2 class="login__title">Login</h2>
+
+      <h3 class="login__motto">start splitting bills with your friends right away</h3>
 <!--
       <form method="post">
           <label hidden for="username">Username:</label>
@@ -36,14 +43,32 @@
       </form>
 -->
       <form action="" method="post">
+        <h3 class="username--lable">Username:</h3>
         <label hidden for="username">Username:</label>
         <input class="input__email" type="email" name="username" id="inputEmail" placeholder="Username" required=''><br>
+        <h3 class="password--label">Password</h3>
         <label hidden for="password">Password:</label>
         <input class="input__password" type="password" name="password" id="inputPass" placeholder="Password" required=''><br>
-        <button class="login-button" type="submit">Login</button>
+        <!-- <button class="login-button" type="submit">Login</button> -->
       </form>
 
-    </div>
+      <img class="login__checkbox" src="" alt="checkbox">
+      <p class="login__remember">Remember me</p>
+      <button class="login-button" type="submit">Login</button>
+      <p class="user__prompt">Not a member yet?</p>
+      <button class="prompt__button">Sign up</button>
+
+    </section>
+
+    <section class="visual-right">
+      <div>
+        <img class="visual-right__image" src="../../static/images/group-of-friends.png">
+        <h2>Something here</h2>
+        <h3>And something else here :></h3>
+      </div>
+    </section>
+
+    
 
 
 
