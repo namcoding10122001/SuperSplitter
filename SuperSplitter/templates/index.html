@@ -1,39 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        
-        
-        <script src="" async defer></script>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
 
 <!-- templates/home.html-->
 
-{% extends 'base.html' %}
-{% load static%}
+{% block stylesheets %} 
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock stylesheets %}
 
 {% block title %}Home{% endblock %}
-
-
-
 {% block content %}
-<p class="testing">This is a test</p>
-<img src="{% static 'images/200.GIF' %}">
 
 
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-{% endif %}
+  <p>This is a test</p>
+  
+
+
+  {% if user.is_authenticated %}
+    Hi {{ user.username }}!
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+  {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a>
+  {% endif %}
 {% endblock %}

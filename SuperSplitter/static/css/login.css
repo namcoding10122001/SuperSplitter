@@ -1,3 +1,168 @@
-* h2 {
-    color: red;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --clr-blue: 220 74% 43%;
+    --clr-teal: 168 96% 46%;
+    --clr-white: 0 0% 100%;
+    --clr-black: 0 0% 0%;
+}
+
+/* --------------- */
+/* css resets      */
+/* --------------- */
+
+/* reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+
+
+/* --------------- */
+/* Utility classes */
+/* --------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem); /*1 rem is the fallback for the variable gap which has not been declared yet*/
+    
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+    
+}
+
+/* images reset */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* form reset  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+    margin: 0;
+	padding: 0;
+
+	min-height: 100%;
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--clr-white)
+    
+
+}
+
+.login {
+    grid-column: 2/ span 4;
+    display: inline-block;
+    
+    
+}
+
+.visual-right {
+    grid-column: 7/ span 6;
+    background-image: url("../images/visual-right-background.png");
+}
+
+.logo {
+    
+    display: flex;
+    justify-content: center;
+    color: #3eadcf;
+    margin-top: 40px;
+    
+}
+
+
+
+label {
+    display: flex;
+    justify-content: center;
+    display: none;
+    visibility: hidden;
+}
+
+.input__email {
+    display: flex;
+    justify-content: center;
+    margin: 60px auto 0px;
+	padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    border-color:  #3eadcf;
+    
+    
+}
+
+.input__password {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 60px;
+	padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    border-color: lightskyblue;
+    
+    
+}
+
+button {
+    width: 60%;
+	height: 40px;
+	margin: 40px auto 0px;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #3eadcf;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+}
+
+button:hover {
+    background: #1e4c5a;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+	padding: 10px;
+
 }
