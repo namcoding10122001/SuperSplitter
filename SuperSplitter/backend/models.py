@@ -1,17 +1,19 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User as DjangoUser
 
 
 class User(models.Model):
+    user = models.OneToOneField(DjangoUser, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=200)
-    dob = models.DateField()
+    dob = models.DateField(null=True, blank=True)
     email = models.EmailField()
     avatar = models.ImageField(null=True, blank=True, upload_to='storage')
     created = models.DateTimeField(auto_now_add=True)
     id = models.AutoField(primary_key=True, unique=True, editable=False)
 
     def __str__(self):
-        return self.name
+        return str(self.user)
 
 
 class Session(models.Model):
